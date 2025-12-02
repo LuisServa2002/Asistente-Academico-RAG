@@ -1,0 +1,42 @@
+# Base de datos vectorial
+chroma_db/
+*.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+# *.ipynb
+
+# Documentos (pueden ser grandes)
+# Descomentar si no quieres subir PDFs a Git
+# documentos/*.pdf
+
+# Logs y temporales
+*.log
+.DS_Store
+Thumbs.db
+
+# Resultados de evaluación
+evaluacion/resultados/
+evaluacion/*.json
+!evaluacion/test_preguntas.json
+
+# Streamlit
+.streamlit/

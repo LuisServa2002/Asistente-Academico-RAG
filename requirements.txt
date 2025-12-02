@@ -1,0 +1,33 @@
+# Core dependencies
+langchain==0.1.0
+chromadb==0.4.22
+sentence-transformers==2.2.2
+
+# LLM
+ollama==0.1.6
+
+# Document processing
+pypdf2==3.0.1
+pdfplumber==0.10.3
+
+# UI
+streamlit==1.29.0
+gradio==4.13.0  # Alternativa a Streamlit
+
+# Utilities
+python-dotenv==1.0.0
+tqdm==4.66.1
+requests==2.31.0
+
+# Deep Learning
+# Usa una versión compatible con Python 3.12/Windows
+torch==2.4.1
+transformers==4.36.2
+
+# Evaluation
+nltk==3.8.1
+rouge-score==0.1.2
+
+# Optional: para mejores visualizaciones
+plotly==5.18.0
+pandas==2.1.4

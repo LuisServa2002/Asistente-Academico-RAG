@@ -1,0 +1,27 @@
+[
+  {
+    "pregunta": "¿Qué es RAG y cómo funciona?",
+    "respuesta_esperada": "RAG (Retrieval-Augmented Generation) es una técnica que combina recuperación de información con generación de lenguaje natural. Primero recupera fragmentos relevantes de documentos mediante búsqueda vectorial, luego usa esos fragmentos como contexto para que un modelo de lenguaje genere respuestas fundamentadas.",
+    "categoria": "conceptual"
+  },
+  {
+    "pregunta": "¿Cuál es el objetivo general del asistente académico?",
+    "respuesta_esperada": "Desarrollar un asistente académico basado en RAG que responda preguntas de estudiantes a partir de materiales de estudio predefinidos, combinando recuperación de información con generación de lenguaje natural.",
+    "categoria": "proyecto"
+  },
+  {
+    "pregunta": "¿Qué técnicas de IA se utilizan en el proyecto?",
+    "respuesta_esperada": "Se utilizan Procesamiento de Lenguaje Natural (NLP), búsqueda vectorial con embeddings semánticos, Retrieval-Augmented Generation (RAG), redes neuronales transformers, y métricas de evaluación como precisión, recall, F1-score, BLEU y ROUGE.",
+    "categoria": "técnico"
+  },
+  {
+    "pregunta": "¿Qué herramientas tecnológicas se implementarán?",
+    "respuesta_esperada": "LangChain para orquestación, LLaMA u OpenAI para el modelo de lenguaje, FAISS o ChromaDB para almacenamiento vectorial, Streamlit para la interfaz de usuario, y PyPDF2 para procesamiento de documentos PDF.",
+    "categoria": "técnico"
+  },
+  {
+    "pregunta": "¿Cuáles son las consideraciones éticas del proyecto?",
+    "respuesta_esperada": "Las consideraciones incluyen identificación de sesgos en respuestas, respeto por derechos de autor y propiedad intelectual, transparencia en las fuentes, explicabilidad de respuestas, protección de datos y privacidad, y honestidad sobre las limitaciones del sistema.",
+    "categoria": "ético"
+  }
+]
