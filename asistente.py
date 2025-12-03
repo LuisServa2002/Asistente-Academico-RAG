@@ -45,6 +45,7 @@ class AsistenteAcademico:
             model=modelo_llama,
             temperature=temperatura,
             num_ctx=4096,  # Contexto grande para documentos largos
+            request_timeout=300.0,  # Agregar esto (5 minutos)
         )
 
         # Base de datos vectorial

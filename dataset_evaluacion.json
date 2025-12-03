@@ -1,0 +1,14 @@
+[
+    {
+        "pregunta": "¿Qué es RAG y cómo funciona?",
+        "respuesta_referencia": "RAG (Retrieval-Augmented Generation) es una técnica que combina recuperación de información con generación de texto. Funciona recuperando documentos relevantes y usándolos como contexto para generar respuestas más precisas.",
+        "documentos_relevantes": ["RAG.pdf"],
+        "documento_id": 1
+    },
+    {
+        "pregunta": "¿Cuáles son las ventajas de usar RAG?",
+        "respuesta_referencia": "Las ventajas incluyen: respuestas basadas en fuentes verificables, reducción de alucinaciones, actualización fácil del conocimiento sin reentrenamiento, y mejor contexto para respuestas específicas.",
+        "documentos_relevantes": ["RAG.pdf"],
+        "documento_id": 2
+    }
+]

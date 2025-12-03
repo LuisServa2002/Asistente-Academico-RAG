@@ -6,6 +6,7 @@ import streamlit as st
 
 # Importar la clase del asistente
 from asistente import AsistenteAcademico
+from evaluador import EvaluadorRAG
 
 # Configuración de la página
 st.set_page_config(
@@ -343,6 +344,43 @@ with st.sidebar:
             st.session_state.historial = []
             st.session_state.documentos_cargados = False
             st.rerun()
+
+    st.divider()
+
+    # Sección de métricas
+    with st.expander("Evaluación y Métricas"):
+        if st.button("Generar Reporte de Métricas", use_container_width=True):
+            try:
+                evaluador = EvaluadorRAG()
+                dataset = evaluador.cargar_dataset()
+                
+                if dataset and st.session_state.asistente:
+                    with st.spinner("Evaluando sistema..."):
+                        for item in dataset:
+                            resultado = st.session_state.asistente.consultar(item["pregunta"])
+                            evaluador.evaluar_pregunta(
+                                item["pregunta"],
+                                resultado["respuesta"],
+                                item["respuesta_referencia"],
+                                [doc.metadata.get("source") for doc in resultado["fuentes"]],
+                                item["documentos_relevantes"],
+                            )
+                        
+                        reporte = evaluador.generar_reporte()
+                        evaluador.mostrar_resumen(reporte)
+                        st.success("Reporte generado: reporte_evaluacion.json")
+                        
+                        col1, col2, col3 = st.columns(3)
+                        with col1:
+                            st.metric("Promedio BLEU", reporte["promedio_bleu"])
+                        with col2:
+                            st.metric("ROUGE-1 F1", reporte["promedio_rouge1_f1"])
+                        with col3:
+                            st.metric("ROUGE-L F1", reporte["promedio_rougeL_f1"])
+                else:
+                    st.warning("Dataset o asistente no disponible")
+            except Exception as e:
+                st.error(f"Error en evaluación: {str(e)}")
 
     st.divider()
 
